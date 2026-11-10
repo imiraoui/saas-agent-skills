@@ -18,7 +18,7 @@ metadata:
 
 ## Work with the renter's account
 
-Let the user sign in through the client's OAuth flow for personal tools. Use the scopes and tools the client actually offers. Use `list_alerted_listings` for alerts already sent and `get_search_preferences` to understand the saved criteria. `list_upcoming_matches` returns historical matches for planning; do not describe them as active or future inventory. Verify current availability against the original listing. If a connected client exposes a separate live search tool, label those results separately from alerts and historical matches.
+Let the user sign in through the client's OAuth flow for personal tools. Use the scopes and tools the client actually offers. Use `list_alerted_listings` for alerts already sent and `get_search_preferences` to understand the saved criteria. `list_historical_matches` (called `list_upcoming_matches` in some clients) returns historical matches for planning; do not describe them as active or future inventory. Verify current availability against the original listing. If a connected client exposes a separate live search tool, label those results separately from alerts and historical matches.
 
 If a client exposes a write tool, confirm the specific change before updating preferences, pausing or resuming alerts, or changing an alerted listing's tracking state. Recording “contacted” or “applied” does not contact a broker or submit an application. Keep private account links and OAuth credentials out of the response.
 
